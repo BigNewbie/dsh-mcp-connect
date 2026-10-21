@@ -1,0 +1,54 @@
+{
+  "name": "dsh-mcp-connect",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Manage MCP servers for DeepSeek Harness from the Web settings page: add, edit, test, import JSON, and connect them at runtime.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "README.en.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "BigNewbie",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "mcp",
+    "deepseek-harness",
+    "model-context-protocol"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigNewbie/dsh-mcp-connect.git"
+  },
+  "homepage": "https://github.com/BigNewbie/dsh-mcp-connect",
+  "bugs": {
+    "url": "https://github.com/BigNewbie/dsh-mcp-connect/issues"
+  }
+}
